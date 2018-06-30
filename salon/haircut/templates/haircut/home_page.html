@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Amazing Amy's Barbershop</title>
+</head> Amazing Amy's Barbershop
+<body>
+<!-- Main Website Header -->
+<h1>A Fresh Cut For you And Your Family!</h1>
+<!-- Barbers -->
+<h2> Barbers in Our Store</h2>
+<p>William</p>
+<img src="http://barber.premiumcoding.com/wp-content/uploads/2013/12/barber-gallery-7.jpg">
+<p>Daniel</p>
+<img src="http://michiganbarberschool.org/wp-content/uploads/2016/06/	michigan-barber-college-classes.jpg">
+<p>Jack</p>
+<img src="http://gammapiu.it/media/images/36634-barber-phon-description-bg.jpg">
+
+
+<!-- User Comments Form -->
+<form method="POST">
+	{% csrf_token %}
+	<input placeholder = "Write Your Nmae" type="text" name="username"> <br>
+	<textarea placeholder= "Write the baber's name You like" name = "comment"></textarea> <br> 
+	<input type="submit">
+</form>
+
+
+<!-- Display User's Comments -->
+<h1>User's Submition</h1>
+<p>Username: {{username}} </p>
+<p>Comment: {{comment}}</p>
+</body>
+</html>
